@@ -1,0 +1,5 @@
+{
+  "name": "AI Security Agent",
+  "description": "A personal AI Security Agent and Behavioral Analytics Engine for generating and evaluating forensic scripts and analyzing logs. This application integrates with Gemini to provide intelligent security assistance.",
+  "requestFramePermissions": []
+}
