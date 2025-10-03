@@ -1,3 +1,4 @@
+s
 substitutions:
   _SERVICE_NAME: 'eyeSOC'
   _REGION: 'us-east5'
@@ -7,9 +8,8 @@ substitutions:
 steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_AR_REPO}/${_SERVICE_NAME}:${COMMIT_SHA}', '.']
-    dir: "./app/"
-    RepoDir: "./app/"
-    
+  
+
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_AR_REPO}/${_SERVICE_NAME}:${COMMIT_SHA}']
 
@@ -33,3 +33,4 @@ options:
   logging: CLOUD_LOGGING_ONLY
   substitutionOption: 'ALLOW_LOOSE'
 timeout: '300s'  
+
